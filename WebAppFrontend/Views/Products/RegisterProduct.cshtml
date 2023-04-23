@@ -1,0 +1,56 @@
+﻿@model RegisterNewProductViewModel
+@{
+    ViewData["Title"] = "Register product";
+}
+<div class="container mt-5">
+    <form class="mt-5" method="post" novalidate>
+        <div class="d-flex justify-content-center align-items-center"><h4>Register a new product</h4></div>
+        <small class="text-danger"><div asp-validation-summary="ModelOnly"></div></small>
+        <div class="mb-3 mt-5">
+            <label asp-for="ArticleNumber"></label>
+            <input class="form-control" asp-for="ArticleNumber" />
+            <small><span class="text-danger" asp-validation-for="ArticleNumber"></span></small>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <label asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" />
+            <small><span class="text-danger" asp-validation-for="Name"></span></small>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <label asp-for="Description"></label>
+            <input class="form-control" asp-for="Description" />
+            <small><span class="text-danger" asp-validation-for="Description"></span></small>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <label asp-for="Price"></label>
+            <input class="form-control" asp-for="Price" />
+            <small><span class="text-danger" asp-validation-for="Price"></span></small>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <label asp-for="TagName"></label>
+            <input class="form-control" asp-for="TagName" />
+            <small><span class="text-danger" asp-validation-for="TagName"></span></small>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <label asp-for="StarRating"></label>
+            <input class="form-control" asp-for="StarRating" />
+            <small><span class="text-danger" asp-validation-for="StarRating"></span></small>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <label asp-for="ImageUrl"></label>
+            <input class="form-control" asp-for="ImageUrl" />
+            <small><span class="text-danger" asp-validation-for="ImageUrl"></span></small>
+        </div>
+
+        <div class="mb-5 mt-5">
+            <button type="submit" class="btn-theme">REGISTER PRODUCT</button>
+        </div>
+
+    </form>
+</div>

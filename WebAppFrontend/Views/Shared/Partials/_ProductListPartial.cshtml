@@ -1,0 +1,19 @@
+﻿@model ProductModel
+
+<div class="item">
+    <div class="product-list mt-3 mb-3">
+        <h4>@Model.ArticleNumber</h4>
+        <div class="mb-5 mb-3">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">@Model.Name</li>
+                <li class="list-group-item">Price: @Math.Round(Model.Price)$</li>
+                <li class="list-group-item">Rating: @Model.StarRating stars</li>
+                <li class="list-group-item">Tag: @Model.TagName</li>
+            </ul>
+        </div>
+
+        <div class="btn-submit">
+            @Html.ActionLink("SELECT", "DeleteProduct", "Products", new { articleNumber = Model.ArticleNumber })
+        </div>
+    </div>
+</div>

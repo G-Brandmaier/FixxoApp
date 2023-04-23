@@ -1,0 +1,30 @@
+﻿@model ProductModel
+@{
+    ViewData["Title"] = "Delete product";
+}
+
+<div class="d-flex justify-content-center- align-items-center mt-5">
+    <div class="container mt-5 mb-5">
+        <form class="mt-5" method="post" novalidate>
+            <label asp-for="ArticleNumber"></label>
+            <input class="form-control mb-3" asp-for="ArticleNumber" readonly="true"  />
+            <label asp-for="Name"></label>
+            <input class="form-control mb-3" asp-for="Name" readonly="true"  />
+            <label asp-for="Description"></label>
+            <input class="form-control mb-3" asp-for="Description" readonly="true" />
+            <label asp-for="Price"></label>
+            <input class="form-control mb-3" asp-for="Price" readonly="true"  />
+            <label asp-for="StarRating"></label>
+            <input class="form-control mb-3" asp-for="StarRating" readonly="true"  />
+            <label asp-for="ImageUrl"></label>
+            <input class="form-control mb-3" asp-for="ImageUrl" readonly="true"  />
+            <label asp-for="TagName"></label>
+            <input class="form-control mb-3" asp-for="TagName" readonly="true"  />
+
+            <div class="mt-5 mb-5">Do you want to remove this product? </div>
+
+            <button class="btn-submit" type="submit">REMOVE</button>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,40 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+        <form class="col-6" method="post" novalidate>
+            <small class="text-danger"><div asp-validation-summary="ModelOnly"></div></small>
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input class="form-control" asp-for="@Model.FirstName" />
+                <small><span class="text-danger" asp-validation-for="@Model.FirstName"></span></small>
+            </div>
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input class="form-control" asp-for="@Model.LastName" />
+                <small><span class="text-danger" asp-validation-for="@Model.LastName"></span></small>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input class="form-control" asp-for="@Model.Email" />
+                <small><span class="text-danger" asp-validation-for="@Model.Email"></span></small>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input class="form-control" asp-for="@Model.Password" />
+                <small><span class="text-danger" asp-validation-for="@Model.Password"></span></small>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ConfirmPassword" class="form-label"></label>
+                <input class="form-control" asp-for="@Model.ConfirmPassword" />
+                <small><span class="text-danger" asp-validation-for="@Model.ConfirmPassword"></span></small>
+            </div>
+            <div class="mb-5 mt-5">
+                <button type="submit" class="btn-theme">REGISTER</button>
+            </div>
+        </form>
+    </div>
+</div>

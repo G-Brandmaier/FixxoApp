@@ -1,0 +1,16 @@
+﻿
+@model int
+@{
+    int noStars = 5 - Model;
+}
+
+<div class="star-rating">
+    @for (int i = 0; i < Model; i++)
+    {
+        <i class="fa-sharp fa-star fa-solid"></i>
+    }
+    @for (int i = 0; i < noStars; i++)
+    {
+        <i class="fa-sharp fa-star fa-regular"></i>
+    }
+</div>

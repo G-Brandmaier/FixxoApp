@@ -1,0 +1,27 @@
+﻿
+<header>
+    <div class="container">
+        <a id="logotype" asp-action="Index" asp-controller="Home">Fixxo.</a>
+
+        <div id="menu" class="hide">
+            <nav class="menu-links links">
+                <a class="link" asp-action="Index" asp-controller="Home">Home</a>
+                <a class="link" asp-action="Index" asp-controller="Products">Products</a>
+                <a class="link" asp-action="Index" asp-controller="Contact">Contact</a>
+                <a class="link" asp-action="Register" asp-controller="Account">Register</a>
+            </nav>
+
+            <nav class="menu-icons icons">
+                <a class="link" to="/search"><i class="fa-regular fa-search"></i></a>
+                <a class="link" to="/compare"><i class="fa-regular fa-code-compare"></i></a>
+                <a class="link" to="/favorites"><i class="fa-regular fa-heart"></i></a>
+                <a class="link" to="/cart"><i class="fa-regular fa-bag-shopping"></i></a>
+                <a class="link ms-5" asp-action="CheckLogedIn" asp-controller="Account"><i class="fa-regular fa-user"></i></a>
+            </nav>
+        </div>
+
+        <div id="toggle-icon" class="icons">
+            <button data-option="toggle" data-target="#menu" class="link"><i class="fa-regular fa-bars"></i></button>
+        </div>
+    </div>
+</header>

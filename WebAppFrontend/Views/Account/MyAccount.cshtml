@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "My Account";
+}
+@model UserModel;
+
+@if(Model.RoleName == "admin" || Model.RoleName == "product manager")
+{
+    <div class="container">
+        <div class="mt-5 mb-5">Account > <span style="color:#ff7373">My Account</span></div>
+        <div class="mt-5 ml-10">
+            <div class="account-user">| Welcome @Model.Name</div>
+            <div class="container">
+                <div class="mb-5"><a asp-action="Logout" asp-controller="Account" class="account-links">Logout</a></div>
+                <div class="account-actions-title"><span style="font-weight:lighter">Actions as: </span>@Model.RoleName</div>
+                <div class="mb-5">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a asp-action="RegisterProduct" asp-controller="Products" class="account-links">Register new product</a></li>
+                        <li class="list-group-item"><a asp-action="GetAllProductsForEdit" asp-controller="Products" class="account-links">Remove product</a></li>
+                        <li class="list-group-item"><a class="account-links">Update product</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="mt-5 mb-5">Account > <span style="color:#ff7373">My Account</span></div>
+        <div class="mt-5 ml-10">
+            <div class="account-user">| Welcome @Model.Name</div>
+            <div class="container">
+                <div class="mb-5"><a asp-action="Logout" asp-controller="Account" class="account-links">Logout</a></div>
+                <div class="account-actions-title"><span style="font-weight:lighter">Actions as: </span>@Model.RoleName</div>
+                <div class="mb-5">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a class="account-links">Order history</a></li>
+                        <li class="list-group-item"><a class="account-links">Favorites</a></li>
+                        <li class="list-group-item"><a class="account-links">Edit user information</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

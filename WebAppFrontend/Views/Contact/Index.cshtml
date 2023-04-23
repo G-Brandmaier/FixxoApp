@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Contacts";
+}
+@model ContactViewModel
+
+<div class="container mt-5">
+    <div class="mt-5 mb-5">Home > <span style="color:#ff7373">Contacts</span></div>
+    <div class="d-flex justify-content-center align-items-center">
+         <iframe class="contacts-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65155.26712934287!2d18.069598965246545!3d59.31455208450053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sStockholm!5e0!3m2!1ssv!2sse!4v1680696636588!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <form class="mt-5" method="post" novalidate>
+        <div class="d-flex justify-content-center align-items-center"><h4>Come in contact with us</h4></div>
+        <div class="row g-3">
+            <div class="col mt-5">
+                <input class="form-control" asp-for="Name" placeholder="Your Name..." />
+                <small><span class="text-danger"></span></small>
+            </div>
+            <div class="col mt-5">
+                <input class="form-control" asp-for="Email" placeholder="Your Email..." />
+                <small><span class="text-danger"></span></small>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <textarea class="form-control" asp-for="Comment" rows="5" placeholder="Your Comments..."></textarea>
+            <small><span class="text-danger"></span></small>
+        </div>
+
+        <div class="mb-5 mt-5">
+            <button type="submit" class="btn-theme">POST COMMENT</button>
+        </div>
+    </form>
+</div>

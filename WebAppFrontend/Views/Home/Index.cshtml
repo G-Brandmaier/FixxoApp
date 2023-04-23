@@ -1,0 +1,32 @@
+﻿@model HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="showcase">
+    <div class="container">
+        <div class="content">
+            <div class="title-2">@Model.Showcase.Title</div>
+            <div class="title-1">@Model.Showcase.Details</div>
+            <div class="title-3">@Model.Showcase.Other</div>
+            <a class="btn-theme" asp-action="Index" asp-controller="Products">@Model.Showcase.ButtonText</a>
+        </div>
+        <img src="@Model.Showcase.ImageUrl" alt="" />
+    </div>
+</section>
+
+@foreach(var tag in Model.TagCollection)
+{
+    <section class="collection-grid">
+        <div class="container">
+            <div class="title">@tag.TagName</div>
+            <div class="item-collection">
+                @foreach (var item in tag.Products)
+                {
+                    <partial name="~/Views/Shared/Partials/_ProductPartial.cshtml" model="item" />
+                }
+            </div>
+        </div>
+    </section>
+}
+

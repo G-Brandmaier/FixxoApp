@@ -1,0 +1,26 @@
+﻿@model ProductModel
+@{
+    ViewData["Title"] = Model.Name;
+}
+<div class="container mt-5">
+    <div class="mt-5 mb-5">Products > <span style="color:#ff7373">ProductsDetail</span></div>
+</div>
+
+<section class="product-detail">
+    <div class="container">
+        <div class="product-img">
+            <img src="@Model.ImageUrl" alt="" />
+        </div>
+
+        <div class="details">
+            <div class="title">@Model.Name</div>
+            <div><partial name="~/Views/Shared/Partials/_StarRatingPartial.cshtml" model="@Model.StarRating" /></div>
+            <div class="price">@Math.Round(Model.Price)$</div>
+            <div class="description">@Model.Description</div>
+            <div class="add-to-cart">
+                <button class="btn-theme">ADD TO CART</button>
+            </div>
+        </div>
+
+    </div>
+</section>

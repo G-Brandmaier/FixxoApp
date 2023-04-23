@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ProductModel>
+@{
+    ViewData["Title"] = "Select to edit";
+}
+
+<section class="collection-grid mt-5">
+    <div class="container mt-5">
+        <div class="item-collection">
+            @foreach (var item in Model)
+            {
+                <partial name="~/Views/Shared/Partials/_ProductListPartial.cshtml" model=@item />
+            }
+        </div>
+    </div>
+</section>
